@@ -1,12 +1,12 @@
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
 
 import com.google.common.collect.ImmutableMap;
 
@@ -19,7 +19,7 @@ public class ChromeTest {
 	}
 
 	AppiumDriver<MobileElement> driver;
-	@BeforeClass
+	@BeforeTest
 	public void setUp() throws MalformedURLException{
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		capabilities.setCapability("platformName", "Android");
@@ -33,7 +33,7 @@ public class ChromeTest {
 
 	
 
-	@org.testng.annotations.Test
+	@Test
 	public void amazonTest() {
 		driver.get("https://www.amazon.in/");
 		driver.findElement(By.id("nav-search-keywords")).sendKeys("Apple Iphone X");
@@ -41,7 +41,7 @@ public class ChromeTest {
 
 	}
 
-	@AfterClass
+	@AfterTest
 	public void teardown(){
 //		driver.quit();
 	}
