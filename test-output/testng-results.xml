@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-08-03T21:40:40 IST" name="Default suite" finished-at="2020-08-03T21:41:01 IST" duration-ms="20507">
+  <suite started-at="2020-08-03T21:53:41 IST" name="Default suite" finished-at="2020-08-03T21:54:01 IST" duration-ms="20326">
     <groups>
     </groups>
-    <test started-at="2020-08-03T21:40:40 IST" name="Default test" finished-at="2020-08-03T21:41:01 IST" duration-ms="20507">
+    <test started-at="2020-08-03T21:53:41 IST" name="Default test" finished-at="2020-08-03T21:54:01 IST" duration-ms="20326">
       <class name="ChromeTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:ChromeTest@233fe9b6]" started-at="2020-08-03T21:40:40 IST" name="setUp" finished-at="2020-08-03T21:40:53 IST" duration-ms="12706" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:ChromeTest@7219ec67]" started-at="2020-08-03T21:53:41 IST" name="setUp" finished-at="2020-08-03T21:53:54 IST" duration-ms="12610" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="amazonTest()[pri:0, instance:ChromeTest@233fe9b6]" started-at="2020-08-03T21:40:53 IST" name="amazonTest" finished-at="2020-08-03T21:41:01 IST" duration-ms="7777" status="PASS">
+        <test-method signature="amazonTest()[pri:0, instance:ChromeTest@7219ec67]" started-at="2020-08-03T21:53:54 IST" name="amazonTest" finished-at="2020-08-03T21:54:01 IST" duration-ms="7691" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- amazonTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:ChromeTest@233fe9b6]" started-at="2020-08-03T21:41:01 IST" name="teardown" finished-at="2020-08-03T21:41:01 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:ChromeTest@7219ec67]" started-at="2020-08-03T21:54:01 IST" name="teardown" finished-at="2020-08-03T21:54:01 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

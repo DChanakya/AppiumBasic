@@ -3,7 +3,9 @@ import java.net.URL;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -17,8 +19,8 @@ public class ChromeTest {
 	public ChromeTest() {
 		// TODO Auto-generated constructor stub
 	}
-
-	AppiumDriver<MobileElement> driver;
+WebDriver driver;
+//	AppiumDriver<MobileElement> driver;
 	@BeforeTest
 	public void setUp() throws MalformedURLException{
 		DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -28,7 +30,9 @@ public class ChromeTest {
 		capabilities.setCapability("chromedriverExecutableDir",System.getProperty("user.dir") + "\\src\\test\\resources");
 		capabilities.setCapability("appium:chromeOptions", ImmutableMap.of("w3c", false));
 		URL url = new URL("http://0.0.0.0:4723/wd/hub");
-		driver= new AppiumDriver<MobileElement>(url,capabilities);
+//		driver= new AppiumDriver<MobileElement>(url,capabilities);
+		driver=new RemoteWebDriver(url, capabilities);
+
 	}
 
 	
