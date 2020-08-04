@@ -1,0 +1,9 @@
+pages\Page.class
+pages\AmazonPage$1.class
+pageObjects\AmazonPageObjects.class
+pages\AmazonPage.class
+managers\ObjectManager.class
+managers\PropertyManager.class
+managers\DriverManager.class
+managers\ExecutionModes.class
+testObjects\ObjectRepository.class

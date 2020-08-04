@@ -21,7 +21,7 @@ public class ChromeTest {
 	}
 WebDriver driver;
 //	AppiumDriver<MobileElement> driver;
-	@BeforeTest
+	//@BeforeTest
 	public void setUp() throws MalformedURLException{
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		capabilities.setCapability("platformName", "Android");
@@ -37,7 +37,7 @@ WebDriver driver;
 
 	
 
-	@Test
+	//@Test
 	public void amazonTest() {
 		driver.get("https://www.amazon.in/");
 		driver.findElement(By.id("nav-search-keywords")).sendKeys("Apple Iphone X");
@@ -45,7 +45,7 @@ WebDriver driver;
 
 	}
 
-	@AfterTest
+	//@AfterTest
 	public void teardown(){
 //		driver.quit();
 	}
