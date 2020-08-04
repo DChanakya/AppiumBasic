@@ -2,6 +2,8 @@ package managers;
 import java.io.IOException;
 import java.util.Properties;
 
+import testObjects.ObjectRepository;
+
 public class PropertyManager {
 	Properties p;
 	

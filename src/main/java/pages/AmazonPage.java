@@ -1,8 +1,5 @@
 package pages;
 
-import java.util.Set;
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
@@ -19,11 +16,11 @@ import testObjects.ObjectRepository;
 public class AmazonPage extends Page {
 	public String URL = "https://www.amazon.in/";
 	private int elementIdentifier;
-	private String[] searchBar = { ObjectRepository.getAndroidSearchBar(), ObjectRepository.getWebSearchBar() };
-	private String[] firstTile = { ObjectRepository.getAndroidTile(), ObjectRepository.getWebTile() };
-	private String[] addToCartButton = { ObjectRepository.getAndroidAddToCart(), ObjectRepository.getWebAddToCart() };
-	private String[] proceedToBuy = { ObjectRepository.getAndroidProceedToBuy(),
-			ObjectRepository.getWebProceedToBuy() };
+	private String[] searchBar = { ObjectRepository.AmazonPageObjects.getAndroidSearchBar(), ObjectRepository.AmazonPageObjects.getWebSearchBar() };
+	private String[] firstTile = { ObjectRepository.AmazonPageObjects.getAndroidTile(), ObjectRepository.AmazonPageObjects.getWebTile() };
+	private String[] addToCartButton = { ObjectRepository.AmazonPageObjects.getAndroidAddToCart(), ObjectRepository.AmazonPageObjects.getWebAddToCart() };
+	private String[] proceedToBuy = { ObjectRepository.AmazonPageObjects.getAndroidProceedToBuy(),
+			ObjectRepository.AmazonPageObjects.getWebProceedToBuy() };
 	private String mode;
 
 	public AmazonPage(String url, WebDriver driver, String mode) {
@@ -68,7 +65,7 @@ public class AmazonPage extends Page {
 			Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).ignoring(NoSuchElementException.class);
 			wait.until(new Function<WebDriver, WebElement>() {
 				public WebElement apply(WebDriver driver) {
-					return driver.findElement(By.xpath(ObjectRepository.getAndroidPopupClose()));
+					return driver.findElement(By.xpath(ObjectRepository.AmazonPageObjects.getAndroidPopupClose()));
 				}
 			}).click();
 		} catch (Exception e) {

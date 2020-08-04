@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-08-04T17:40:21Z" name="Command line suite" finished-at="2020-08-04T17:40:51Z" duration-ms="30220">
+  <suite started-at="2020-08-04T17:53:31Z" name="Command line suite" finished-at="2020-08-04T17:54:08Z" duration-ms="37689">
     <groups>
     </groups>
-    <test started-at="2020-08-04T17:40:21Z" name="Command line test" finished-at="2020-08-04T17:40:51Z" duration-ms="30220">
+    <test started-at="2020-08-04T17:53:31Z" name="Command line test" finished-at="2020-08-04T17:54:08Z" duration-ms="37689">
       <class name="AmazonTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:AmazonTest@44c8afef]" started-at="2020-08-04T17:40:21Z" name="setUp" finished-at="2020-08-04T17:40:21Z" duration-ms="9" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:AmazonTest@4923ab24]" started-at="2020-08-04T17:53:31Z" name="setUp" finished-at="2020-08-04T17:53:31Z" duration-ms="13" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="addItemsToCart()[pri:0, instance:AmazonTest@44c8afef]" started-at="2020-08-04T17:40:21Z" name="addItemsToCart" finished-at="2020-08-04T17:40:51Z" duration-ms="29594" status="PASS">
+        <test-method signature="addItemsToCart()[pri:0, instance:AmazonTest@4923ab24]" started-at="2020-08-04T17:53:31Z" name="addItemsToCart" finished-at="2020-08-04T17:54:08Z" duration-ms="37051" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addItemsToCart -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:AmazonTest@44c8afef]" started-at="2020-08-04T17:40:51Z" name="teardown" finished-at="2020-08-04T17:40:51Z" duration-ms="606" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:AmazonTest@4923ab24]" started-at="2020-08-04T17:54:08Z" name="teardown" finished-at="2020-08-04T17:54:08Z" duration-ms="614" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
