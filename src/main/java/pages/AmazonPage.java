@@ -22,7 +22,6 @@ public class AmazonPage extends Page {
 	private String[] proceedToBuy = { ObjectRepository.AmazonPageObjects.getAndroidProceedToBuy(),
 			ObjectRepository.AmazonPageObjects.getWebProceedToBuy() };
 	private String mode;
-
 	public AmazonPage(String url, WebDriver driver, String mode) {
 		super(url, driver, mode);
 	}
@@ -41,13 +40,14 @@ public class AmazonPage extends Page {
 		driver.findElement(By.xpath(searchBar[elementIdentifier])).sendKeys(Keys.ENTER);
 	}
 
-	public void openFirstItemFromList() {
-		waitForElement(firstTile[elementIdentifier]);
-		driver.findElement(By.xpath(firstTile[elementIdentifier])).click();
+	public void openItemFromList(String item) {
+		String xpath = String.format(firstTile[elementIdentifier], item);
+		waitForElement(xpath);
+		driver.findElement(By.xpath(xpath)).click();
 	}
 
 	public void clickOnAddToCart() {
-		if (mode.equalsIgnoreCase(ExecutionModes.ANDROID.getModeValue()))
+		if (mode.equalsIgnoreCase(ExecutionModes.ANDROIDWEB.getModeValue()))
 			closeAndroidPopup();
 		else
 			switchTab();

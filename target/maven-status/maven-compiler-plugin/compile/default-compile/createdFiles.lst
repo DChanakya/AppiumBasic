@@ -1,7 +1,0 @@
-pages\Page.class
-pages\AmazonPage$1.class
-pages\AmazonPage.class
-managers\PropertyManager.class
-managers\DriverManager.class
-managers\ExecutionModes.class
-testObjects\ObjectRepository.class

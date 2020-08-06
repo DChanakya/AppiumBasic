@@ -1,7 +1,7 @@
 package managers;
 
 public enum ExecutionModes {
-	WEB("web"),ANDROID("android");
+	WEB("web"),ANDROIDWEB("androidWeb"),ANDROIDNATIVE("androidApp");
 	private String mode;
 		
 	public String getModeValue() {

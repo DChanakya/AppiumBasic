@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="AmazonTest">
+      <class name="AndroidAppTest">
         <methods>
-          <include name="addItemsToCart"/>
-          <include name="teardown"/>
           <include name="setUp"/>
+          <include name="teardown"/>
+          <include name="openDemoApp"/>
         </methods>
-      </class> <!-- AmazonTest -->
+      </class> <!-- AndroidAppTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
