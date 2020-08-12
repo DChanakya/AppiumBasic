@@ -1,5 +1,7 @@
 package pages;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
@@ -35,6 +37,8 @@ public class AmazonPage extends Page {
 	}
 
 	public void searchForItem(String item) {
+		if (mode.equalsIgnoreCase(ExecutionModes.ANDROIDWEB.getModeValue()))
+			closeAndroidPopup(ObjectRepository.AmazonPageObjects.getAndroidPinPopup());
 		driver.findElement(By.xpath(searchBar[elementIdentifier])).click();
 		driver.findElement(By.xpath(searchBar[elementIdentifier])).sendKeys(item);
 		driver.findElement(By.xpath(searchBar[elementIdentifier])).sendKeys(Keys.ENTER);
@@ -48,7 +52,7 @@ public class AmazonPage extends Page {
 
 	public void clickOnAddToCart() {
 		if (mode.equalsIgnoreCase(ExecutionModes.ANDROIDWEB.getModeValue()))
-			closeAndroidPopup();
+			closeAndroidPopup(ObjectRepository.AmazonPageObjects.getAndroidPopupClose());
 		else
 			switchTab();
 		waitForElement(addToCartButton[elementIdentifier]);
@@ -60,12 +64,14 @@ public class AmazonPage extends Page {
 		return (driver.findElement(By.xpath(proceedToBuy[elementIdentifier])).getText().contains("Proceed to Buy"));
 	}
 
-	public void closeAndroidPopup() {
+//	public void closeAndroidPinPopup() {}
+	
+	public void closeAndroidPopup(String popupXpath) {
 		try {
 			Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).ignoring(NoSuchElementException.class);
 			wait.until(new Function<WebDriver, WebElement>() {
 				public WebElement apply(WebDriver driver) {
-					return driver.findElement(By.xpath(ObjectRepository.AmazonPageObjects.getAndroidPopupClose()));
+					return driver.findElement(By.xpath(popupXpath));
 				}
 			}).click();
 		} catch (Exception e) {

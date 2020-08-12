@@ -9,12 +9,17 @@ public class ObjectRepository {
 		private static String webSearchBar = "//*[@id='twotabsearchtextbox']";
 		private static String androidSearchBar = "//*[@id='nav-search-keywords']";
 		private static String androidTile = "//*[contains(text(),'%s')]";
-		private static String webTile = androidTile;
+		private static String webTile = "//*[contains(@class,'a-size-medium a-color-base a-text-normal') and contains(text(),'%s')]";
 		private static String androidAddToCart = "//*[@id='add-to-cart-button']";
 		private static String webAddToCart = androidAddToCart;
 		private static String androidProceedToBuy = "//*[contains(text(),'Proceed to Buy')]";
 		private static String webProceedToBuy = androidProceedToBuy;
 		private static String androidPopupClose = "//*[@class='sparkle-close']";
+		private static String androidPinPopup = "//*[@class='qtips-text']";
+
+		public static String getAndroidPinPopup() {
+			return androidPinPopup;
+		}
 
 		private AmazonPageObjects() {
 		}
@@ -62,8 +67,9 @@ public class ObjectRepository {
 		private static String equals = "com.google.android.calculator:id/eq";
 		private static String result = "com.google.android.calculator:id/result_final";
 
-		private CalculatorObjects() {}
-		
+		private CalculatorObjects() {
+		}
+
 		public static String getNumber() {
 			return number;
 		}
